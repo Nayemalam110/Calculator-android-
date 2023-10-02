@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="15dp"
-        android:gravity="center"
+        android:gravity="right"
         android:padding="10dp"
         android:textSize="20dp"
         tools:text="Number" />
@@ -28,11 +28,12 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="15dp"
-        android:gravity="center"
+        android:gravity="right"
         android:padding="10dp"
 
         android:textSize="20dp"
         tools:text="Result" />
+
     <Space
         android:layout_width="match_parent"
         android:layout_height="50dp" />
@@ -41,33 +42,34 @@
 
         <Button
             style="@style/btnNumber"
-            android:text="AC">
+            android:onClick="allClearAction"
+            android:text="AC" />
 
-        </Button>
+        <Button
+            style="@style/btnNumber"
+            android:onClick="clearAction"
+            android:text="C" />
 
         <Space
 
-            style="@style/btnNumber"
-            />  <Space
-
-        style="@style/btnNumber"
-        />
-
+            style="@style/btnNumber" />
 
 
         <Button
             style="@style/btnOperation"
+            android:onClick="numberOperation"
             android:text="/"
 
-            ></Button>
+            />
     </LinearLayout>
+
     <LinearLayout style="@style/btnRow">
 
         <Button
             style="@style/btnNumber"
-            android:text="7">
 
-        </Button>
+            android:text="7" />
+
 
         <Button
             style="@style/btnNumber"
@@ -87,13 +89,13 @@
 
             ></Button>
     </LinearLayout>
+
     <LinearLayout style="@style/btnRow">
 
         <Button
             style="@style/btnNumber"
-            android:text="4">
+            android:text="4" />
 
-        </Button>
 
         <Button
             style="@style/btnNumber"
@@ -109,10 +111,9 @@
 
         <Button
             style="@style/btnOperation"
-            android:text="-"
-
-            ></Button>
+            android:text="-" />
     </LinearLayout>
+
     <LinearLayout style="@style/btnRow">
 
         <Button
@@ -135,10 +136,9 @@
 
         <Button
             style="@style/btnOperation"
-            android:text="+"
-
-            ></Button>
+            android:text="+" />
     </LinearLayout>
+
     <LinearLayout style="@style/btnRow">
 
         <Button
@@ -151,17 +151,15 @@
             style="@style/btnNumber"
             android:text="0"
 
-            ></Button>
-
+            />
 
 
         <Button
             style="@style/btnNumber"
             android:layout_weight="2"
-            android:text="="
             android:background="@color/orange"
-
-            ></Button>
+            android:onClick="equalAction"
+            android:text="=" />
     </LinearLayout>
 
 
